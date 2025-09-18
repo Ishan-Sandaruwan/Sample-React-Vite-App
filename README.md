@@ -1,69 +1,83 @@
-# React + TypeScript + Vite
+# Sample React Vite App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository demonstrates how to create a simple **React application** using [Vite](https://vitejs.dev/).  
+Vite is a next-generation, fast build tool that provides an optimized development experience for modern frontend frameworks.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- ⚡️ Lightning-fast development with Vite
+- 🎨 React 18 with JSX/TSX support
+- 🔥 Hot Module Replacement (HMR)
+- 📦 Ready for production build
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Project Structure
+```
+.
+├── public/            # Static assets
+├── src/               # Application source code
+│   ├── App.jsx        # Main App component
+│   ├── main.jsx       # Entry point
+│   └── assets/        # Images, icons, etc.
+├── index.html         # HTML template
+├── package.json       # Dependencies & scripts
+├── vite.config.js     # Vite configuration
+└── README.md          # Documentation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Requirements
+- [Node.js](https://nodejs.org/) (>= 14.x recommended)
+- npm or yarn or pnpm
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ▶️ Run Locally
+
+### 1. Install dependencies
+```bash
+npm install
 ```
+
+### 2. Start development server
+```bash
+npm run dev
+```
+
+Now open **http://localhost:5173** in your browser.
+
+---
+
+## 🏗️ Build for Production
+```bash
+npm run build
+```
+
+The production-ready files will be generated in the **dist/** folder.
+
+---
+
+## 🔎 Preview Production Build
+```bash
+npm run preview
+```
+
+---
+
+## 🧩 Customization
+- Update project metadata in `package.json`
+- Modify `vite.config.js` for plugins or custom config
+- Add new pages/components inside the `src/` folder
+
+---
+
+## 🤝 Contributing
+Feel free to fork this repo, create issues, or submit pull requests to improve this project.
+
+---
+
+## 📜 License
+This project is licensed under the MIT License.
